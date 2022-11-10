@@ -1,0 +1,28 @@
+
+<!-- <div class="head">
+    <span style="font: normal 36px 'Open Sans', cursive;color:white;font-size: 35px;margin-right: 10px;margin-left: 20px;">G6 </span><span style="color:lightseagreen;font-size: 25px;">SHOPPING </span>    
+    <button class="btn" (click)="loadDashboard()"  style="margin-left:35px" mat-raised-button>All Products</button> 
+    <button class="btn" (click)="showWishListed()"  style="margin-left:5px" mat-raised-button>Wish List</button>
+    <button class="btn" (click)="showCart()" style="margin-left:5px" mat-raised-button>Cart</button>
+    <button class="btn" (click)="logout()"  style="margin-left:5px" mat-raised-button>Logout</button>
+</div> -->
+
+<div class="header">
+  <a class="logo"><span style="font: normal 20px 'Open Sans', cursive;color:white;font-size: 25px;margin-right: 10px;margin-left: 20px;">G6 </span><span style="color:lightseagreen;font-size: 25px;">SHOPPING </span>
+  </a>
+    <div class="header-right">
+      <a style="color:white" routerLink="/dashboard/allproducts">All Products</a>
+      <a style="color:white" routerLink="/dashboard/wishlisted">Wish List</a>
+      <a style="color:white" routerLink="/dashboard/cart">Cart</a>
+      <a style="color:white" routerLink="/" (click)="logout()">Log Out</a>
+    </div>
+  </div>
+
+
+<div class="content">
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+

@@ -1,0 +1,55 @@
+
+
+<div class="content">
+<div style="margin-top: 20px" class="login-box">
+    <h2>Add Product</h2>
+    <mat-form-field style="color:white" appearance="fill">
+        <mat-label style="color:white">Category</mat-label>
+        <select id="ddlViewBy" [(ngModel)]="category" matNativeControl required>
+      
+          <option style="color:black" value="all">All</option>
+          <option style="color:black"  value="Chair">Chair</option>
+          <option style="color:black"  value="Table">Table</option>
+          <option style="color:black"  value="Sofa">Sofa</option>
+          <option style="color:black"  value="Bed">Bed</option>
+        </select>
+      </mat-form-field>
+    <form [formGroup]="ProductForm" >
+      <div class="user-box">
+        <input formControlName="name" type="text" name="" required="">
+        <label>Name</label>
+      </div>
+      <div class="user-box">
+        <input formControlName="brand"  name="" required="">
+        <label>Brand</label>
+      </div>
+      <div class="user-box">
+        <input formControlName="price"  name="" required="">
+        <label>Price</label>
+      </div>
+      <div class="user-box">
+        <input formControlName="stock"  name="" required="">
+        <label>Stocks</label>
+      </div>
+
+      <div class="user-box">
+        <input type="file" name="file" formControlName="file" (change)="onFileChange($event)">
+        <label>Image</label>
+      </div>
+
+
+      <!-- <div class="form-group">
+        <label for="file">File</label>
+        <input type="file" name="file" formControlName="file" (change)="onFileChange($event)">
+
+    </div> -->
+      <a style="margin-left:20px;">
+
+        <button  (click)="addProduct()" class="button"  mat-raised-button >ADD PRODUCT</button>
+        &nbsp;&nbsp;
+        <button  routerLink="/admindashboard/bulk-add" mat-raised-button >Bulk add</button>
+      </a>
+    </form>
+  </div>
+</div>
+

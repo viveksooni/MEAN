@@ -1,0 +1,20 @@
+<div style="margin-left:80px">
+    <mat-form-field appearance="fill">
+        <mat-label>Category</mat-label>
+        <select (change)="filterList()" [(ngModel)]="category" matNativeControl required>
+          <option selected value="Chair">Chair</option>
+          <option value="Table">Table</option>
+          <option value="Sofa">Sofa</option>
+          <option value="Bed">Bed</option>
+          <option  value="all">All</option>
+        </select>
+      </mat-form-field>
+    </div>
+<!-- <app-login-product *ngFor=" let productone of productList" [product]="productone" ></app-login-product>
+
+-->
+<div class="cards">
+<!-- <div class="grid-container"> -->
+  <app-login-product *ngFor=" let productone of productList" [product]="productone" ></app-login-product>
+<!-- </div> -->
+</div>

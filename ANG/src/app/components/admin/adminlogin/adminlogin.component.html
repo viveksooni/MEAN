@@ -1,0 +1,32 @@
+
+
+
+<!-- ------------------------------------------------------- -->
+<div class="upper">
+<div class="container">
+    <section id="content">
+      <form  [formGroup]="loginForm">
+        <h1>ADMIN LOGIN</h1>
+        <div>
+          <input formControlName="username" type="text" placeholder="Username" required="" id="username" />
+          <div class="err">
+            {{getUsernameError()}}
+        </div>
+        </div>
+        <div>
+          <input formControlName="password" type="password" placeholder="Password" required="" id="password" />
+          <div class="err">
+            {{getPasswordError()}}
+        </div>
+        </div>
+        <div>
+          <!-- <input type="submit" value="Log in" /> -->
+          <button  id="bn" (click)="login()" >LOGIN</button>
+          <!-- <a href="#">Lost your password?</a> -->
+          <!-- <a href="#">Register</a> -->
+        </div>
+      </form><!-- form -->
+      
+    </section><!-- content -->
+  </div>
+</div>

@@ -1,0 +1,51 @@
+                <!-- <div >
+                    <mat-card >
+                        <div class="containerrr">
+                            <div class="container-itemsss">
+                                <div class="itemmm">
+                                        imageE HERE
+                                </div>
+                                <div class="itemmm">
+                                    <div style="font-size:medium;margin-top:20px">
+                                    {{product.name}}
+                                </div>
+                                    <div style="margin-top:25px">
+                                        BRAND:{{product.brand}}
+                                    </div>
+                                    
+
+                                </div>
+                                <div class="itemmm">
+                                    <div style="font-family:sans-serif; font-style:italic;font-size:25px;color: #df001a;margin-top: 10%;"> Price</div>
+                                    
+                                    <div style="color: #df001a;font-size:large;font-family: sans-serif;margin-top: 20px;">
+                                        {{product.price}}
+                                    </div>
+                                    
+
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </mat-card> 
+
+                </div>
+        
+         -->
+<div class="rescard">
+         <div class="card">
+            <!-- <img src="/w3images/jeans3.jpg" alt="Denim Jeans" style="width:100%"> -->
+            <img  style="height:200px;width:180px" src="{{product.img}}" border='0' alt='server error'/>
+            <h1>{{product.name}}</h1>
+            <p class="price">₹{{product.price}}  </p>
+            <p *ngIf="product.stock>=10" style="color:green">Stocks remaining:{{product.stock}}</p>
+            <p *ngIf="product.stock<10" style="font-style: bold;color:red">Stocks remaining:{{product.stock}}</p>
+            <p *ngIf="product.stock==0" style="color:red;font-size: larger;">OUT OF STOCK</p>
+            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+            <p><button *ngIf="product.stock>0"  (click)="login()" style="color:white" class="bun"> Add to Cart</button></p>
+          </div>
+</div>
+          
+
+          <!-- <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/bwCfVmCL/19-C951-A9-2-E5-A-5-E42-3944-F35-A22187-CBE.png' border='0' alt='19-C951-A9-2-E5-A-5-E42-3944-F35-A22187-CBE'/></a> -->

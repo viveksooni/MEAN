@@ -1,0 +1,71 @@
+<!-- <div class="container">
+    <div style="width: 100%; margin-bottom: 20px;">
+        <mat-card>
+            <div style="width: 50%; display: flex;">
+                <div style="width: 70%;">
+                    <div style="margin-left: 20px; margin-top: 20px; font-size: 30px; font-style: italic;">{{cartItem.name}}</div>
+                    <div style="margin-left: 20px; margin-top: 20px; font-style: italic;">PRICE:{{cartItem.price}}</div>
+
+                </div>
+                <div style="width: 50%; margin-left: 50px; margin-top: 20px; font-size: 20px;">
+                        Quantity:{{cartItem.quantity}}
+                        <button [disabled]="buttonStatus" (click)="increaseCount()"  style="margin-left:50%" mat-raised-button>+</button>
+                        <button (click)="decreaseCount()"  style="margin-left:50%" mat-raised-button>-</button>
+                        {{cartItem.price}} * {{cartItem.quantity}} = {{cartItem.price*cartItem.quantity}}
+                
+                </div>
+            </div>
+        </mat-card>
+    </div>
+    
+</div> -->
+
+<!-- 
+    <mat-card style="margin-bottom:10px">
+        <div class="container">
+            <div class="item">
+                <div style="margin-left: 20px; margin-top: 20px; font-size: 15px; font-style: italic;">{{cartItem.name}}</div>
+                <div style="margin-left: 20px; margin-top: 20px; font-style: italic;">PRICE:{{cartItem.price}}</div>
+            </div>
+            <div class="item">
+                Quantity:{{cartItem.quantity}}
+                <button [disabled]="buttonStatus" (click)="increaseCount()"  style="margin-left:10px" mat-raised-button>+</button>
+                <button (click)="decreaseCount()"  style="margin-left:10px" mat-raised-button>-</button>
+            </div>
+
+            <div class="item">
+                {{cartItem.price}} * {{cartItem.quantity}} = {{cartItem.price*cartItem.quantity}}
+            </div>
+
+        </div>
+    </mat-card>
+ -->
+
+
+
+
+
+ <div class="card_item">
+    <div class="product_img">
+      <!-- <img src=https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=643&q=80" alt="" /> -->
+    </div>
+    <div class="product_info">
+      <h1>{{cartItem.name}}</h1>
+      <p>Lorem Ipsum is simply dummy text.</p>
+      <div class="close-btn">
+        <i class="fa fa-close"></i>
+      </div>
+      <div class="product_rate_info">
+        <h1>$ {{cartItem.price}}</h1>
+        <!-- <span (click)="" class="pqt-minus">-</span> -->
+        <!-- <span class="pqt">1</span>
+        <span class="pqt-plus">+</span> -->
+        
+        <button [disabled]="buttonStatus" (click)="increaseCount()"  style="margin-left:10px" mat-raised-button>+</button>
+        {{cartItem.quantity}}
+        <button (click)="decreaseCount()"  style="margin-left:10px" mat-raised-button>-</button>
+        <!-- <div ngIf="{{cartItem.quantity<cartItem.stock}}" style="color:red">This much Stocks are not Available</div> -->
+            
+      </div>
+    </div>
+  </div>

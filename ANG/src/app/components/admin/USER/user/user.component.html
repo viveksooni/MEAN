@@ -1,0 +1,28 @@
+<!-- <mat-card class="card" >
+    <div class="cardcontent">
+        <div class="description">
+            <div>
+                Name : {{user.username}}
+            </div>
+            <div>
+                Email: {{user.password}}
+                <br>
+    
+            </div>    
+          <button  (click)="deleteUser()" style="margin-left:3%" mat-raised-button>Delete User</button>
+          <button (click)="updateUser()" style="margin-left:3%" mat-raised-button>Update User</button>
+    
+        </div>
+    
+    </div>
+    </mat-card> -->
+
+    <div class="card">
+   
+        <h1>Username:{{user.username}}</h1>
+        <p class="price">Email: {{user.email}}</p>
+        <p class="price">Phone:{{user.phoneno}}</p>
+        <p><button  (click)="deleteUser()">Remove User</button></p>
+        <p><button  (click)="updateUser()" >Update User</button></p>
+        <p><button  (click)="addCoupon()" >ADD Coupon</button></p>
+      </div>

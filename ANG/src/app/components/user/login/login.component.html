@@ -1,0 +1,74 @@
+
+<!-- <div class="outercontainer">
+    <mat-card class="container">
+    <div style="width: 100%;">
+    <p>
+        <mat-toolbar color="primary">
+        <span>Login to Continue</span>
+        </mat-toolbar>
+    </p>
+    </div>
+    <form [formGroup]="loginForm" > 
+
+        <mat-form-field  appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput
+            formControlName="username"
+            >
+        </mat-form-field>
+        <div class="error">
+        {{getUsernameError()}}
+        </div>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput
+            formControlName="password"
+            >
+        </mat-form-field>
+        <div class="error">
+            {{getPasswordError()}}
+        </div>
+
+        <br>
+        <button style="margin-left:30%" (click)="login()" class="button"  mat-raised-button color="primary">LOGIN</button>
+    </form>
+    </mat-card>
+
+
+</div> -->
+
+<!-- --------------------------------------------- -->
+<div class="upper">
+<div class="container">
+    <section id="content">
+      <form  [formGroup]="loginForm">
+        <h1>USER LOGIN</h1>
+        <div>
+          <input formControlName="username" type="text" placeholder="Username" required="" id="username" />
+          <div class="err">
+            {{getUsernameError()}}
+        </div>
+        </div>
+        <div>
+          <input formControlName="password" type="password" placeholder="Password" required="" id="password" />
+          <div class="err">
+            {{getPasswordError()}}
+        </div>
+        </div>
+        <div>
+          <!-- <input type="submit" value="Log in" /> -->
+          <button  id="bn" (click)="login()" >LOGIN</button>
+          <!-- <a href="#">Lost your password?</a> -->
+          <!-- <a href="#">Register</a> -->
+        </div>
+      </form><!-- form -->
+      
+    </section><!-- content -->
+  </div>
+</div>
+
+
+

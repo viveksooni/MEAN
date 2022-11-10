@@ -1,0 +1,89 @@
+    <!-- <div class="head">
+      <span style="font: normal 36px 'Open Sans', cursive;color:white;font-size: 35px;margin-right: 10px;margin-left: 20px;">G6 </span><span style="color:lightseagreen;font-size: 25px;">SHOPPING </span>
+      <button class="btn1 btn" (click)="showProducts()" style="margin-left:35px" mat-raised-button>View Products</button>
+      <button class="btn" (click)="login()" style="margin-left:5px" mat-raised-button>User Login</button>
+      <button class="btn" (click)="adminLogin()" style="margin-left:5px" mat-raised-button>Admin Login</button>      
+      <button class="btn" (click)="register()" style="margin-left:5px" mat-raised-button>Register</button>
+      <button class="btn" (click)="registerAdmin()" style="margin-left:5px" mat-raised-button>Register Admin</button>
+    </div> -->
+
+	<!-- ------------------------------------------------------------------------------ -->
+	<div class="header">
+		<a class="logo"><span style="font: normal 20px 'Open Sans', cursive;color:white;font-size: 25px;margin-right: 10px;margin-left: 20px;">G6 </span><span style="color:lightseagreen;font-size: 25px;">SHOPPING </span>
+		</a>
+		<div class="header-right">
+		  <a style="color:white" routerLink="/">Home</a>
+		  <a style="color:white" routerLink="/login">Login</a>
+		  <a style="color:white" routerLink="/loginadmin">Admin Login</a>
+		  <a style="color:white" routerLink="/register">Register</a>
+		  <a  style="color:white" routerLink="/registeradmin">Admin Registration</a>
+		</div>
+	  </div>
+  <!-- --------------------------------------------- -->
+<div class="content">
+<router-outlet></router-outlet>
+</div>
+
+<!-- -------------------------------- -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div>
+<footer class="footer-distributed">
+			<div class="footer-left">
+				<h3>G6<span>SHOPPING</span></h3>
+				<p class="footer-links">
+					<a href="#" class="link-1">Home</a>
+					
+					<a href="#">Blog</a>
+				
+					<a href="#">Pricing</a>
+				
+					<a href="#">About</a>
+					
+					<a href="#">Faq</a>
+					
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">G6 Shopping © 2022</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>Kanpur </span> Great learning </p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>9521377393</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@g6shopping.com">support@g6shopping.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>
+            Get exciting offers on various items on our shop. With amazing discount for the customers feel free to explore
+            </span>
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+</div>

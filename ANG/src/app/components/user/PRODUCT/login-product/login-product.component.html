@@ -1,0 +1,61 @@
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<mat-card class="card" >
+    <div class="cardcontent">
+        <div class="description">
+            <div>
+                Name : {{product.name}}
+            </div>
+            <div>
+                Brand: {{product.brand}}
+                <input (input)="setbutton()" style="height:30px ;width: 45px; margin-left: 250px;" type="number" [(ngModel)]="amounttoadd" value="{{amounttoadd}}">
+                <button mat-raised-button style=" margin-left: 10px;" [disabled]="buttonStatus" (click)="addCart()">Add</button>
+                
+          <button (click)="addWishList()"  style="margin-left:3%" mat-raised-button>
+                <button  mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+                    <mat-icon>favorite</mat-icon>
+                 </button>
+        </button>
+                 
+                <br>
+                Price: {{product.price}}
+    
+            </div>    
+              
+          <button  (click)="addCart()" style="margin-left:3%" mat-raised-button>Add to Cart</button> 
+    
+        </div>
+    
+    </div>
+    </mat-card>
+    
+     -->
+
+
+     <!-- <div class="card">
+        <img style="height: 20px;" src="{{product.imagelink}}" alt="Product Image" style="width:100%">
+        <h1>{{product.name}}</h1>
+        <p class="price">₹{{product.price}}</p>
+        <p *ngIf="product.stock>10" style="color:green">Stocks remaining:{{product.stock}}</p>
+        <p *ngIf="product.stock<10" style="color:red">Stocks remaining:{{product.stock}}</p>
+        <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+        <p><button (click)="addCart()">Add to Cart</button></p>
+        <p><button (click)="addWishList()">Add to WishList</button></p>
+      </div> -->
+      <div class="card">
+        <!-- <img src="/w3images/jeans3.jpg" alt="Denim Jeans" style="width:100%"> -->
+        <img  style="height:200px;width:180px" src="{{product.img}}" border='0' alt='server error'/>
+        
+        <h1>{{product.name}}</h1>
+        <p class="price">₹{{product.price}}  </p>
+        <p *ngIf="product.stock>=10" style="color:green">Stocks remaining:{{product.stock}}</p>
+        <p *ngIf="product.stock<10" style="color:red;font-size: large;">Stocks remaining:{{product.stock}}</p>
+        
+        <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+        <p *ngIf="product.stock==0" style="color:red;font-size: larger;">OUT OF STOCK</p>
+        <p><button *ngIf="product.stock>0" (click)="addCart()">Add to Cart</button></p>
+        <p><button (click)="addWishList()">Add to WishList</button></p>
+      </div>
+
+      <!-- <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/kM1FTZWB/i-phone-10.jpg' border='0' alt='i-phone-10'/></a> -->
+      <!-- <a href='https://postimg.cc/GHSqC7H1' target='_blank'><img src='https://i.postimg.cc/mgTq7K4h/iphone-13-family-hero.png' border='0' alt='iphone-13-family-hero'/></a><br /><a href='https://gasstation-nearme.com/chevron'>directions to chevron</a><br /> -->
+      <!-- <img src='https://i.postimg.cc/Hx0svfrR/surface.jpg' border='0' alt='surface'/></a> -->

@@ -1,0 +1,21 @@
+
+
+<div  class="header">
+  <a class="logo"><span style="font: normal 20px 'Open Sans', cursive;color:white;font-size: 25px;margin-right: 10px;margin-left: 20px;">G6 </span><span style="color:lightseagreen;font-size: 25px;">SHOPPING </span>
+  </a>
+    <div class="header-right">
+      <a style="color:white" routerLink="/admindashboard/allproducts">All Products</a>
+      <a  style="color:white" routerLink="/admindashboard/allusers">Users</a>
+      <a style="color:white" routerLink="/admindashboard/addproduct">Add Product</a>
+      <a style="color:white" routerLink="/admindashboard/adduser">Add User</a>
+      <a style="color:white" routerLink="/admindashboard/salesreport">Sales Report</a>
+      <a style="color:white" routerLink="/" (click)="logout()">LogOut</a>
+    </div>
+  </div>
+
+
+
+<div class="content">
+<router-outlet></router-outlet>
+</div>
+

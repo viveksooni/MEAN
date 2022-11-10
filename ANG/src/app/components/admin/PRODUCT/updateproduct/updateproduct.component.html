@@ -1,0 +1,77 @@
+<!-- <div class="outercontainer">
+    <mat-card class="container">
+    <div style="width: 100%;">
+    <p>
+        <mat-toolbar color="primary">
+        <span>Fill these fields to Update</span>
+        </mat-toolbar>
+    </p>
+    </div>
+    <form [formGroup]="ProductForm" > 
+
+        <mat-form-field  appearance="fill">
+            <mat-label>Product Name</mat-label>
+            <input matInput
+            formControlName="name"
+            >
+        </mat-form-field>
+        <div class="error">
+        {{getNameError()}}
+        </div>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Stocks Quantity</mat-label>
+            <input matInput
+            formControlName="brand"
+            >
+        </mat-form-field>
+        <div class="error">
+            {{getBrandError()}}
+        </div>
+        <mat-form-field appearance="fill">
+            <mat-label>Price</mat-label>
+            <input matInput
+            formControlName="price"
+            >
+        </mat-form-field>
+        <div class="error">
+            {{getPriceError()}}
+        </div>
+        <br>
+        <button (click)="updateProduct()" style="margin-left:30%"  class="button"  mat-raised-button color="primary">UPDATE PRODUCT</button>
+    </form>
+    </mat-card>
+
+
+</div> -->
+
+<div class="content">
+    <div style="margin-top: 20px" class="login-box">
+        <h2>Update Product</h2>
+        <form [formGroup]="ProductForm" >
+          <div class="user-box">
+            <input formControlName="name" type="text" name="" required="">
+            <label>Name</label>
+          </div>
+          
+          <div class="user-box">
+            <input formControlName="price"  name="" required="">
+            <label>Updated Price</label>
+          </div>
+          <div class="user-box">
+            <input formControlName="brand" name="" required="">
+            <label>Updated Stocks</label>
+          </div>
+    
+          <a>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>       
+            <button style="margin-left:20px;" (click)="updateProduct()" class="button"  mat-raised-button color="primary">UPDATE PRODUCT</button>
+          </a>
+        </form>
+      </div>
+    </div>

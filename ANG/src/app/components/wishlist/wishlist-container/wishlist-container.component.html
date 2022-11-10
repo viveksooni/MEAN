@@ -1,0 +1,15 @@
+<mat-card class="container">
+    <div class="items">
+        <mat-card>
+        <div class="head">
+            <span style="color:white;font-size: large;">Wish List</span>
+        </div>
+        <div class="cards">
+        <!-- <div class="grid-container"> -->
+            <app-wishlist-item (notifyParent)="updateList($event)" *ngFor=" let oneproduct of WishList" [product]="oneproduct"></app-wishlist-item>
+          <!-- </div> -->
+        </div>
+        </mat-card>
+        <!-- <app-wishlist-item (notifyParent)="updateList($event)" *ngFor=" let oneproduct of WishList" [product]="oneproduct"></app-wishlist-item> -->
+    </div>
+</mat-card>

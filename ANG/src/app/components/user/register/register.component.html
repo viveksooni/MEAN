@@ -1,0 +1,154 @@
+<!-- <div class="outercontainer">
+    <mat-card class="container">
+    <div style="width: 100%;">
+    <p>
+        <mat-toolbar color="primary">
+        <span>Register With Us</span>
+        </mat-toolbar>
+    </p>
+    </div>
+    <form [formGroup]="loginForm" > 
+
+        <mat-form-field  appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput
+            formControlName="username"
+            >
+        </mat-form-field>
+        <div class="error">
+        {{getUsernameError()}}
+        </div>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput
+            formControlName="password"
+            >
+        </mat-form-field>
+        <div class="error">
+            {{getPasswordError()}}
+        </div>
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>Email Id</mat-label>
+            <input matInput
+            formControlName="email"
+            >
+        </mat-form-field>
+        <div class="error">
+            {{getEmailError()}}
+        </div>
+
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>Phone no</mat-label>
+            <input matInput
+            formControlName="phone"
+            >
+        </mat-form-field>
+        <div class="error">
+            {{getPhoneError()}}
+        </div>
+        <br>
+        <button (click)="register()" style="margin-left:30%"  class="button"  mat-raised-button color="primary">REGISTER</button>
+    </form>
+    </mat-card>
+
+
+</div> -->
+<!-- ------------------------------------------------------- -->
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="main">
+<div class="container">
+    <div class="head">
+        USER REGISTRATION
+    </div>
+    <form [formGroup]="loginForm">
+          <div class="box">
+        <label for="firstName" class="fl fontLabel"> First Name: </label>
+              <div class="new iconBox">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+              <div class="fr">
+                      <input formControlName="username" type="text" name="Username" placeholder="First Name"
+            class="textBox" autofocus="on" required>
+              </div>
+              <div class="clr"></div>
+          </div>
+          <div class="error">
+            {{getUsernameError()}}
+        </div>
+    <div class="box">
+        <label for="password" class="fl fontLabel"> Password </label>
+              <div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+              <div class="fr">
+                      <input formControlName="password" type="Password" required name="password" placeholder="Password" class="textBox">
+              </div>
+              <div class="clr"></div>
+          </div>
+          <div class="error">
+            {{getPasswordError()}}
+        </div>
+          <div class="box">
+        <label for="phone" class="fl fontLabel"> Phone No.: </label>
+              <div class="fl iconBox"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+              <div class="fr">
+                      <input formControlName="phone" type="text" required name="phoneNo" maxlength="10" placeholder="Phone No." class="textBox">
+              </div>
+              <div class="clr"></div>
+          </div>
+          <div class="error">
+            {{getPhoneError()}}
+        </div>
+          <div class="box">
+        <label for="email" class="fl fontLabel"> Email ID: </label>
+              <div class="fl iconBox"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+              <div class="fr">
+                      <input formControlName="email" type="email" required name="email" placeholder="Email Id" class="textBox">
+              </div>
+              <div class="clr"></div>
+          </div>
+          <div class="error">
+            {{getEmailError()}}
+        </div>
+          <div class="box" style="background:black">
+            <button style="margin-left: 40%;" (click)="register()"  class="button"  mat-raised-button color="primary">REGISTER</button>
+          </div>
+    </form>
+</div> -->
+
+<div class="content">
+    <div class="login-box">
+        <h2>User Registration</h2>
+        <form [formGroup]="loginForm" >
+          <div class="user-box">
+            <input formControlName="username" type="text" name="" required="">
+            <label>Name</label>
+          </div>
+          <div class="user-box">
+            <input type="password" formControlName="password"  name="" required="">
+            <label>Password</label>
+          </div>
+          <div class="user-box">
+            <input formControlName="email" name="" required="">
+            <label>Email</label>
+          </div>
+          <div class="user-box">
+            <input formControlName="phone" name="" required="">
+            <label>Phone</label>
+          </div>
+          <a>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>       
+            <button style="margin-left:20px;" (click)="register()" class="button"  mat-raised-button>REGISTER</button>
+          </a>
+        </form>
+      </div>
+    </div>

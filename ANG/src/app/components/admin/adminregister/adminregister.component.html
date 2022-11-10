@@ -1,0 +1,33 @@
+
+
+
+<div class="content">
+    <div  class="login-box">
+        <h2>Admin Registration</h2>
+        <form [formGroup]="loginForm" >
+          <div class="user-box">
+            <input formControlName="username" type="text" name="" required="">
+            <label>Name</label>
+          </div>
+          <div class="user-box">
+            <input type="password" formControlName="password"  name="" required="">
+            <label>Password</label>
+          </div>
+          <div class="user-box">
+            <input formControlName="email" name="" required="">
+            <label>Email</label>
+          </div>
+          <div class="user-box">
+            <input formControlName="phone" name="" required="">
+            <label>Phone</label>
+          </div>
+          <a>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>       
+            <button style="margin-left:20px;" (click)="register()" class="button"  mat-raised-button>REGISTER</button>
+          </a>
+        </form>
+      </div>
+    </div>

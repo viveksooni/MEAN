@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+      <div class="card">
+        <!-- <img src="/w3images/jeans3.jpg" alt="Denim Jeans" style="width:100%"> -->
+        <img  style="height:200px;width:180px" src="{{product.img}}" border='0' alt='server error'/>
+        
+        <h1>{{product.name}}</h1>
+        <p class="price">₹{{product.price}}  </p>
+        <p *ngIf="product.stock>=10" style="color:green">Stocks remaining:{{product.stock}}</p>
+        <p *ngIf="product.stock<10" style="font-style: bold;color:red">Stocks remaining:{{product.stock}}</p>  
+        <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+        <!-- <p><button [disabled]="true" (click)="sendMail()"><i class="fa fa-envelope" style="font-size:25px;color:red"></i></button></p> -->
+        <p><button (click)="deleteProduct()">Remove Product</button></p>
+        <p><button (click)="updateProduct()" >Update Product</button></p>
+      </div>

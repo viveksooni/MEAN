@@ -1,0 +1,104 @@
+<!-- <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <div  class="main">
+        <mat-card style="width: 70%;" >
+    <div>
+    <div style="padding: 0; margin-bottom: 10px;">
+        <mat-toolbar color="primary">
+            <div style="margin-left: 5px;">CART</div>       
+        </mat-toolbar>
+    </div>
+    <div >   
+        <div class="cartitemss">
+            <div>
+                <app-cart-item (notifyParent)="updateList($event)" class="cart-items"  *ngFor="let cartitem of cartArray" [cartItem]="cartitem" ></app-cart-item> 
+            </div>
+        </div>
+    </div>
+    </div>
+    <div style="margin-top: 30px;" >
+    <mat-toolbar>
+        <div style="margin-left:60%;font-size: 15px;">TOTAL AMOUNT = {{totalamount}}</div>
+        
+    </mat-toolbar>
+        <div>
+        <button color="accent" mat-raised-button style="margin-left:60%" (click)="placeOrder()">Place Order</button>
+        </div>
+    </div>
+    </mat-card>
+    </div> -->
+    
+
+    
+    
+
+     <div  class="container">
+        <div style="margin-left: 30px" class="payment_details">
+          <h1>Payment Information</h1>
+          <div class="details_card">
+            <div class="name_address">
+              <div class="first_lastName">
+                <input type="text" placeholder="First Name" />
+                <input type="text" placeholder="Last Name" />
+              </div>
+              <div class="address">
+                <input type="text"  id="put" placeholder="Address" />
+                <input type="number" placeholder="Pincode" />
+                <input type="text" placeholder="Country" />
+              </div>
+            </div>
+            <h1>Shipping Details</h1>
+            <div class="shipping_card">
+              <div class="new_card">
+                <!-- <h4>Same as personal</h4>
+                <p id="output">Bharat House Bombay Samachar Road</p>
+                <p>400001</p> -->
+                <!-- <input type="text" placeholder="Street" /> -->
+              </div>
+              <div class="add_savedcard">
+                <!-- <h4>Saved Address</h4>
+                <p>Lokhandwala Complex, Andheri (west)</p>
+                <p>400053</p> -->
+                <!-- <input type="text" placeholder="Locality" /> -->
+              </div>
+            </div>
+            <div class="proced_payment">
+              <button mat-raised-button color="accent" (click)="placeOrder()" >Place Order</button>
+            </div>
+          </div>
+        </div>
+        <div class="order_summary container">
+           <div > 
+            <h1>Order Summary</h1>
+            <mat-card style="padding:20px">
+            <app-cart-item (notifyParent)="updateList($event)" class="cart-items"  *ngFor="let cartitem of cartArray" [cartItem]="cartitem" ></app-cart-item>                   
+            </mat-card>
+            <hr />
+            <div class="order_price">
+              <p>Order summary</p>
+              <h4>{{totalamount}}</h4>
+            </div>
+
+
+            <div class="order_price">
+              <p>HAVE A COUPON</p>
+              <input [(ngModel)]="couponInput" type="text">
+              <button style="height:60px" mat-raised-button (click)="applyCoupon()">Apply</button>
+            </div> 
+             <!-- <div class="order_service">
+              <p>Total Amount</p>
+              <h4>{{totalamount+10}}</h4>
+            </div> -->
+
+            <div *ngIf="couponStatus" class="order_price">
+              <p>Coupon Discount</p>
+              <h4>{{(totalamount*discountPercent)/100}}</h4>
+            </div>
+
+            <div class="order_total">
+              <p>Order Total</p>
+              <h4>{{totalamount*(1-discountPercent/100)}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      
